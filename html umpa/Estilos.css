@@ -1,0 +1,297 @@
+/* SCROLL SUAVE */
+html {
+    scroll-behavior: smooth;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+body {
+    background: #0b0b0b;
+    color: #e5e5e5;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+}
+
+/* CONTENEDORES */
+.container, .conteiner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* HEADER */
+header {
+    background: rgba(17,17,17,0.95);
+    border-bottom: 1px solid #c9a44c;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #c9a44c;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+/* NAV */
+nav a {
+    color: #fff;
+    margin-left: 25px;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #c9a44c;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+#hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+                url("tabas-umpa.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    animation: fadeIn 1.5s ease;
+}
+
+#hero h1 {
+    font-size: 3.2em;
+    margin-bottom: 15px;
+}
+
+/* BOTÓN */
+button {
+    background: #c9a44c;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #e0b95a;
+}
+
+/* SECCIONES */
+section {
+    padding: 70px 0;
+    text-align: center;
+}
+
+/* SOMOS */
+#somos-fast h2 {
+    color: #c9a44c;
+    margin-bottom: 20px;
+}
+
+#somos-fast p {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* SUCURSALES */
+#sucursales {
+    background: #111;
+}
+
+.carta {
+    background: #1c1c1c;
+    margin: 15px auto;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 300px;
+    transition: 0.3s;
+}
+
+.carta:hover {
+    transform: translateY(-5px);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #111;
+    color: #c9a44c;
+}
+
+/* SECCIÓN MESSI PRO */
+#lio1 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #c9a44c;
+    margin-top: 40px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(201,164,76,0.6),
+                 0 0 20px rgba(201,164,76,0.3);
+}
+
+/* BOTÓN LM10 */
+a[href*="youtube"] {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #111;
+    background: linear-gradient(45deg, #c9a44c, #e0bc63);
+    padding: 12px 30px;
+    border-radius: 30px;
+    width: fit-content;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+a[href*="youtube"]:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+}
+
+/* IMAGEN FINAL */
+img {
+    display: block;
+    margin: 25px auto;
+    width: 280px;
+    border-radius: 15px;
+    border: 2px solid #c9a44c;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7),
+                0 0 15px rgba(201,164,76,0.5);
+    transition: 0.3s;
+}
+
+img:hover {
+    transform: scale(1.07);
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* QUIÉNES SOMOS PAGE */
+#quienes {
+    padding: 80px 20px;
+}
+
+.somos-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.somos-img {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.somos-img img {
+    width: 300px;
+    border-radius: 12px;
+    border: 2px solid #c9a44c;
+}
+
+.somos-texto {
+    max-width: 600px;
+}
+
+.somos-texto h2 {
+    color: #c9a44c;
+    margin-bottom: 20px;
+}
+
+/* ===== MODELOS PAGE ===== */
+#modelos-page {
+    padding: 80px 20px;
+}
+
+/* FLEX PRINCIPAL */
+.modelos-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* IMÁGENES EN GRID */
+.modelos-img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.modelos-img img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #c9a44c;
+    transition: 0.3s;
+}
+
+.modelos-img img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* TEXTO */
+.modelos-texto {
+    max-width: 500px;
+    text-align: left;
+}
+
+.modelos-texto h2 {
+    color: #c9a44c;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.modelos-texto p {
+    line-height: 1.8;
+    white-space: pre-line;
+}
